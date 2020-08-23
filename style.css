@@ -1,0 +1,139 @@
+*{
+    font-family: "Sharp Grotesk Medium 20";
+    color: #000;
+}
+
+.container-fluid{
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+}
+
+.sidebar{
+    background-color: #fff;
+    padding: 40px 20px;
+    height: 100vh;
+    width: 24%;
+    min-width: 420px;
+    
+}
+
+.main-content-container{
+    padding: 40px 20px;
+    min-height: 100vh;
+    width: 76%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    
+}
+
+.coolors{
+    background-color: red;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: background-color 0.3s cubic-bezier(0.54, 0.01, 0.52, 0.96);
+}
+
+.c1{
+    background-color: rgb(186, 186, 250);
+}
+
+.c1 *{
+    color: #fff;
+
+}
+
+.cnumber{
+    font-size: 5em;
+    letter-spacing: 6px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.cdescription{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+hr{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border: 0px;
+}
+
+.chex{
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.cchange-color-text{
+    color: #fff
+}
+
+.cchangecolor{
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cchangecolor input[type="color"]{
+    width: 100%;
+    padding: 4px;
+    border: 0;
+    height: 26px;
+    background-color: #fff;
+}
+
+.color-copied{
+    padding: 25px 40px;
+    background-color: #fff;
+    width: fit-content;
+    box-shadow: 0px 5px 25px #3e3e3e50;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(50%, -50%);
+    opacity: 0;
+}
+
+.animation-copied{
+    animation: color-copied-animation 1.5s ;
+}
+
+@keyframes color-copied-animation {
+    0%   {opacity: 0; transform: translate(50%, -50%);}
+    40%  {opacity: 1; }
+    85%  {opacity: 1; transform: translate(50%, -150%);}
+    100% {opacity: 0; transform: translate(50%, -150%);}
+  }
+
+.color-copied p{
+    line-height: 0;
+    margin: 0;
+    color: #3e3e3e
+}
+
+#clipboard{
+    opacity: 0;
+    position: absolute;
+    top: 0
+}
